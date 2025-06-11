@@ -1,0 +1,283 @@
+/* Scoped styles for MorePage */
+.more-page-container {
+    padding: 2rem;
+    max-width: 1200px;
+    /* margin: 0 auto; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -70px;
+}
+
+.more-page-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #222;
+}
+
+.more-page-card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.more-page-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two equal columns */
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.more-page-instruction-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.more-page-card-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.more-page-steps-list {
+    padding-left: 1.2rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.more-page-steps-list li {
+    margin-bottom: 0.5rem;
+    list-style-type: decimal;
+}
+
+.more-page-action-button {
+    padding: 0.6rem 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.more-page-action-button:hover {
+    background-color: #0056b3;
+}
+
+.more-page-logout-button {
+    background-color: #dc3545;
+}
+
+.more-page-logout-button:hover {
+    background-color: #b02a37;
+}
+
+/* PIN Modal Overlay - Background */
+.pin-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(23, 32, 42, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Modal Content Container */
+.pin-modal-content {
+    background: #ffffff;
+    padding: 28px 32px;
+    border-radius: 12px;
+    width: 380px;
+    max-width: 90vw;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    margin-bottom: 170px;
+    margin-left: 75px;
+    transform: translateY(0);
+    animation: modal-appear 0.3s ease-out forwards;
+    position: relative;
+}
+
+/* Modal Header */
+.pin-modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #2c3e50;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.pin-modal-content p {
+    color: #5d6778;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+/* Modal Input Field */
+/* PIN Input Container */
+.pin-modal-input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* Individual PIN Input Box */
+.pin-modal-input-box {
+    width: 45px;
+    height: 55px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #e1e5ee;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f9fafc;
+}
+
+.pin-modal-input-box:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+/* Original input style (keeping for backward compatibility) */
+.pin-modal-input {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 13px 0;
+    font-size: 16px;
+    border: 1px solid #e1e5ee;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #f9fafc;
+}
+
+.pin-modal-input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+/* Modal Button Container */
+.pin-modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+/* Modal Buttons */
+
+/* Modal Buttons - Common styles */
+.pin-modal-btn {
+    flex: 1;
+    margin: 0 6px;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+    background-color: #3498db;
+    color: white;
+    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.25);
+}
+
+/* All buttons hover effect */
+.pin-modal-btn:hover {
+    background-color: #ff6b6b; /* New hover color for all buttons */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3);
+}
+
+.pin-modal-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(255, 107, 107, 0.3);
+}
+
+/* Primary Action Button */
+.pin-modal-btn.primary {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Secondary Action Button */
+.pin-modal-btn.secondary {
+    background-color: #f1f5f9;
+    color: #334155;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Close Button (X) if needed */
+.pin-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 20px;
+    color: #94a3b8;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.pin-modal-close:hover {
+    color: #475569;
+}
+
+/* Animation for modal appearance */
+@keyframes modal-appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .pin-modal-content {
+        width: 90%;
+        max-width: 320px;
+        padding: 24px;
+        margin-left: 0;
+    }
+    
+    .pin-modal-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .pin-modal-btn {
+        margin: 0;
+    }
+    
+    .pin-modal-input-container {
+        gap: 6px;
+    }
+    
+    .pin-modal-input-box {
+        width: 35px;
+        height: 45px;
+        font-size: 18px;
+    }
+}

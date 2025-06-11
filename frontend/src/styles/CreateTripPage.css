@@ -1,0 +1,345 @@
+.create-trip-page {
+  width: 79vw;
+  height: 78vh;
+  /* background-color removed */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 100px;
+  box-sizing: border-box;
+}
+
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-trip-draft-button {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.draft-button:hover {
+  background-color: #cfcfcf;
+}
+
+.create-trip-center-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.create-trip-quote-message {
+  font-size: 22px;
+  font-style: italic;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.create-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.create-button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  /* border-radius: 15px; */
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 50px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 20%;
+  will-change: transform;
+}
+
+.create-button:disabled {
+  pointer-events: none;
+}
+
+.create-button:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.create-button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.create-trip-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.create-trip-dialog-box {
+  background-color: #fff;
+  padding: 50px 20px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-left: 225px;
+}
+
+.create-trip-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-top: -27px;
+  margin-left: 25px;
+}
+
+.create-trip-dialog-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.create-trip-dialog-actions {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  margin-bottom: -15px;
+}
+
+.create-trip-dialog-btn {
+  padding: 10px 50px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.create-trip-new-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.create-trip-new-btn:hover {
+  background-color: #0062cc;
+}
+
+.create-trip-draft-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.create-trip-draft-btn:hover {
+  background-color: #0062cc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    background-color: rgba(30, 30, 30, 0);
+  }
+
+  to {
+    background-color: rgba(30, 30, 30, 0.5);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.create-trip-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.create-trip-close-btn:hover {
+  color: #000;
+}
+
+.create-trip-disabled-btn {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+
+.create-trip-dialog-btn {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.create-trip-has-tooltip {
+  position: relative;
+}
+
+.create-trip-has-tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 120%;
+  /* below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.create-trip-has-tooltip:hover::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  /* place the arrow just below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  /* arrow pointing up */
+}
+
+.create-trip-has-tooltip:not([data-tooltip]):hover::after,
+.create-trip-has-tooltip[data-tooltip=""]:hover::after,
+.create-trip-has-tooltip:not([data-tooltip]):hover::before,
+.create-trip-has-tooltip[data-tooltip=""]:hover::before {
+  display: none;
+  content: none;
+}
+
+.create-trip-tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.create-trip-tooltip-text.always-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.create-trip-draft-btn:disabled {
+  cursor: not-allowed;
+  background-color: #555;
+  opacity: 0.5;
+  /* Show the 'not-allowed' cursor when disabled */
+}
+
+.create-trip-tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 170%;
+  left: 0%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 1;
+  transition: opacity 0.2s;
+}
+
+.disabled-button-wrapper:hover .create-trip-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.create-trip-tooltip-wrapper.disabled-state:hover .create-trip-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.create-trip-tooltip-wrapper.disabled-state {
+  cursor: not-allowed;
+}
+
+.create-trip-tooltip-wrapper.disabled-state button:disabled {
+  pointer-events: none;
+}
+
+/* Style for the disabled button */
+.create-trip-new-btn:disabled {
+  cursor: not-allowed;
+  /* Cursor changes to 'not-allowed' when disabled */
+  opacity: 0.5;
+  background-color: #555;
+  /* Optional: reduce opacity to show it's disabled */
+}
+
+/* Tooltip text styling */
+.create-trip-new-btn:disabled[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  position: absolute;
+  top: 190%;
+  left: 100%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  /* opacity: 5; */
+  visibility: visible;
+}

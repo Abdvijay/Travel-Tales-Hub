@@ -1,0 +1,308 @@
+/* ✅ Full-page layout */
+.profile-page-custom {
+    max-height: calc(100vh - 60px);
+    /* Adjust based on header height */
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-top: -59px;
+    margin-left: -53px;
+    max-width: 105%;
+    height: 145%;
+}
+
+/* ✅ Profile Header Section */
+.profile-page-custom .profile-header {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* ✅ Left Section (Profile Picture) */
+.profile-page-custom .profile-left {
+    flex-shrink: 0;
+    margin-left: 300px;
+}
+
+
+.profile-page-custom .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+/* ✅ Right Section (Username, Stats, Bio) */
+.profile-page-custom .profile-right {
+    flex: 1;
+}
+
+/* ✅ Username */
+.profile-page-custom .profile-username {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* ✅ Count section (Posts, Followers, Following) */
+.profile-page-custom .profile-stats {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ✅ Bio section */
+
+.profile-page-custom .profile-bio {
+    max-width: 500px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.4;
+    font-size: 14px;
+    color: #333;
+}
+
+/* ✅ Edit Profile Button - Shortened */
+
+.profile-page-custom .edit-profile-btn {
+    margin-top: 10px;
+    padding: 8px 14px;
+    background-color: #0b5ed7;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 250px;
+}
+
+.edit-profile-btn:hover {
+    background-color: #0056b3;
+}
+
+/* ✅ Edit Profile Dialog - Modern Style */
+.edit-profile-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+/* ✅ Dialog Content Box */
+.dialog-content {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ✅ Dialog Heading */
+.dialog-content h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* ✅ Bio Textarea */
+.dialog-content textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    resize: none;
+}
+
+/* ✅ File Input */
+.dialog-content input[type="file"] {
+    width: 100%;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+
+/* ✅ Buttons Container */
+.dialog-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ✅ Save Button */
+.save-btn {
+    padding: 10px 45px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-right: 50px;
+}
+
+.save-btn:hover {
+    background: #0056b3;
+}
+
+/* ✅ Cancel Button */
+.cancel-btn {
+    padding: 10px 45px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #ff4d4d;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cancel-btn:hover {
+    background: #cc0000;
+}
+
+/* ✅ Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✅ Circular Placeholder for First Letter */
+.profile-page-custom .profile-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #555;
+    font-weight: bold;
+}
+
+.profile-page-custom .profile-divider {
+    margin: 24px 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+.profile-page-custom .post-section {
+    padding: 20px;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+.profile-page-custom .no-post-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #777;
+    font-size: 14px;
+}
+
+.profile-page-custom .no-post-icon {
+    margin-bottom: 8px;
+}
+
+.no-post-text {
+    color: #777;
+    font-size: 20px;
+}
+
+.profile-page-custom .profile-post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 equal columns */
+    gap: 20px;
+}
+
+
+.profile-page-custom .post-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.profile-post-card {
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 52%;
+}
+
+.profile-page-custom .post-card:hover {
+    transform: translateY(-3px);
+}
+
+.profile-page-custom .post-card-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.profile-page-custom .post-card-title {
+    padding: 10px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive: On small screens, reduce columns */
+@media (max-width: 900px) {
+    .profile-page-custom .profile-post-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-page-custom .profile-post-grid {
+        grid-template-columns: 1fr;
+    }
+}

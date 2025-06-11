@@ -1,0 +1,201 @@
+.highlight-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+}
+
+.highlight-dialog {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    max-width: 750px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* overflow-y: auto; */
+    max-height: 650px;
+    animation: dialogFadeIn 0.3s ease-out;
+    /* position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+}
+
+@keyframes dialogFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.highlight-close-btn {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.highlight-close-btn:hover {
+    color: #000;
+}
+
+/* Header Section with Title and Close Button */
+.highlight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    width: 100%;
+}
+
+.highlight-title {
+    flex: 1;
+    text-align: left;
+}
+
+.highlight-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+
+/* Flexbox for input fields in one line */
+.highlight-title-days-charge-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+}
+
+.title-container {
+    flex: 2;
+}
+
+.days-charge-container {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+}
+
+.title-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.days-charge-container input {
+    flex: 1;
+    /* Equal width for both inputs */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+/* Row Styling */
+.highlight-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-bottom: 5px;
+}
+
+/* General Styling for the Rows */
+.highlight-row input,
+.highlight-row textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.highlight-row input[type="number"],
+.highlight-row input[type="text"] {
+    width: 100%;
+}
+
+.highlight-row textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.image-preview {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.image-preview img {
+    max-width: 40%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.image-preview img:hover {
+    transform: scale(1.02);
+}
+
+.highlight-post-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.highlight-post-btn:disabled {
+    background-color: #ed5252;
+    cursor: not-allowed;
+}
+
+.highlight-post-btn:hover {
+    background-color: #218838;
+}
+
+.highlight-row label span {
+    font-weight: normal;
+}
+
+.title-container input:focus,
+.days-charge-container input:focus,
+.highlight-row input:focus,
+.highlight-row textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+input[type="file"]:hover {
+    border-color: #999;
+    background-color: #f5f5f5;
+}

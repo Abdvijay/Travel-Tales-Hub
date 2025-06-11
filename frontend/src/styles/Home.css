@@ -1,0 +1,58 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-section {
+    display: flex;
+    margin-top: 60px;
+    /* Adjust for fixed top bar */
+}
+
+/* Right Content Section */
+.content-area {
+    margin-left: 275px;
+    padding: 0px;
+    width: calc(100% - 220px);
+}
+
+.welcome-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* vertically center */
+    align-items: center;
+    /* horizontally center */
+    text-align: center;
+    color: #606060;
+    width: 1175px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+}
+
+.welcome-container h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-container p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-container {
+    animation: fadeIn 0.6s ease-out;
+}

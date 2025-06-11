@@ -1,0 +1,71 @@
+.full-trip-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.full-trip-dialog {
+    background-color: white;
+    padding: 20px;
+    width: 95%;
+    /* max-width: 1200px; */
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.fullTrip-dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px; */
+}
+
+.fullTrip-close-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 98%;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.trip-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.trip-table th,
+.trip-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.trip-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.no-trips-text {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+    margin-top: 30px;
+}
+
+.trip-table tr:hover {
+    background: #eaf6fb;
+    transition: background 0.2s;
+}

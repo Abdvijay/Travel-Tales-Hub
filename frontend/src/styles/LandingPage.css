@@ -1,0 +1,284 @@
+/* Base styles for full viewport and preventing scrolling */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+}
+
+/* Full-screen landing page with a fixed position */
+.landing-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("C:/Users/My_Sowriyam/OneDrive/Pictures/landingpage.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  color: white;
+}
+
+/* Semi-transparent overlay to improve text readability */
+.landing-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 1;
+}
+
+/* Content wrapper to position content over the overlay */
+.landing-content-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* Content container with animations */
+.landing-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Show content animation */
+.landing-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header section with title and tagline */
+.landing-header {
+  margin-bottom: 1rem;
+}
+
+/* Main title styling */
+.landing-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(90deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  letter-spacing: -0.5px;
+}
+
+/* Tagline container */
+.landing-tagline {
+  margin-top: 1rem;
+  overflow: hidden;
+  height: 1.8rem;
+}
+
+/* Tagline text with animation */
+.landing-tagline-text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease 0.5s, transform 0.8s ease 0.5s;
+  display: block;
+}
+
+.landing-tagline-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Feature points section */
+.landing-feature-points {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease 1s, transform 0.8s ease 1s;
+  margin: 1rem 0 2rem;
+}
+
+.landing-feature-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Individual feature item */
+.landing-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Feature icon */
+.landing-feature-icon {
+  font-size: 2rem;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.landing-feature:hover .landing-feature-icon {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Feature text */
+.landing-feature-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Button container */
+.landing-button-container {
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease 1.5s, transform 0.8s ease 1.5s;
+}
+
+.landing-buttons-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Primary action button */
+.landing-explore-btn {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 0;
+  padding: 1.2em 2.5em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.landing-explore-btn:before {
+  content: "";
+  background: linear-gradient(45deg, #ff6b6b, #f54545);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.landing-explore-btn:hover {
+  border-color: transparent;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.landing-explore-btn:hover:before {
+  width: 100%;
+}
+
+.landing-btn-text {
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .landing-title {
+    font-size: 3.5rem;
+  }
+  
+  .landing-tagline-text {
+    font-size: 1.3rem;
+  }
+  
+  .landing-feature-points {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-title {
+    font-size: 2.8rem;
+  }
+  
+  .landing-tagline-text {
+    font-size: 1.1rem;
+  }
+  
+  .landing-feature-points {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .landing-feature {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    gap: 1rem;
+  }
+  
+  .landing-feature-icon {
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .landing-title {
+    font-size: 2.3rem;
+  }
+  
+  .landing-tagline {
+    height: auto;
+  }
+  
+  .landing-tagline-text {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .landing-explore-btn {
+    font-size: 0.9rem;
+    padding: 1em 2em;
+  }
+}
