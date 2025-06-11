@@ -4,28 +4,29 @@ Travel Tales Hub is a web-based travel storytelling platform that allows users t
 
 🚀 Features
 
-👥 User Features
-	1.Registration & Login with secure password hashing and PIN-based verification
- 
- 	2.Profile Management with image upload and bio editing
- 	
-  	3.Trip Management: Create, edit, draft, or publish travel trips with images, dates, and details
- 	
-  	4.Highlight Post Module: Showcase special trips with custom images, duration, and charges
- 	
-  	5.Likes & Comments: Engage with others in real-time (instant UI updates, no page reload)
- 	
-  	6.Search Functionality: Filter posts by title in a responsive newsfeed format
- 	
-  	7.Notifications Module: Get notified when someone likes/comments on your posts
-
-🛠️ Admin Features
+	👥 User Features
 	
- 	1.Dashboard Overview: Total users, post counts, and weekly post activity graphs
+ 		1.Registration & Login with secure password hashing and PIN-based verification
+ 
+ 		2.Profile Management with image upload and bio editing
  	
-  	2.Post Moderation: View, manage, or delete any user-generated content
+  		3.Trip Management: Create, edit, draft, or publish travel trips with images, dates, and details
  	
-  	3.Secure Admin Panel with role-based access
+  		4.Highlight Post Module: Showcase special trips with custom images, duration, and charges
+ 	
+  		5.Likes & Comments: Engage with others in real-time (instant UI updates, no page reload)
+ 	
+  		6.Search Functionality: Filter posts by title in a responsive newsfeed format
+ 	
+  		7.Notifications Module: Get notified when someone likes/comments on your posts
+
+	🛠️ Admin Features
+	
+ 		1.Dashboard Overview: Total users, post counts, and weekly post activity graphs
+ 	
+  		2.Post Moderation: View, manage, or delete any user-generated content
+ 	
+  		3.Secure Admin Panel with role-based access
 
 🧑‍💻 Tech Stack
 
@@ -37,6 +38,7 @@ Travel Tales Hub is a web-based travel storytelling platform that allows users t
 | Styling           | Custom CSS / Tailwind  |
 | API Communication | REST APIs              |
 | Authentication    | JWT + PIN Verification |
+
 
 🗃️ Database Tables Used
 
